@@ -20,24 +20,26 @@ const xd = 0;
 const xe = 0;
 
 function oras(krituliaiList) {
-  let savaitesKrituliuKiekis = [0];
+  let savaitesKrituliuKiekis = 0;
   for (let i = 0; i < krituliaiList.length; i++) {
-    savaitesKrituliuKiekis += krituliaiList[i];
+    savaitesKrituliuKiekis += krituliaiList[i];}
+    
     if (savaitesKrituliuKiekis === 0) {
       return "Sausra";
-    }
+    } 
     if (savaitesKrituliuKiekis <= 50) {
       return "Ganetinai sausa savaite";
-    }
+    } 
     if (savaitesKrituliuKiekis <= 200) {
       return "Lietinga savaite";
-    }
-    if (savaitesKrituliuKiekis <= 1000) {
+    } 
+    if (savaitesKrituliuKiekis > 1000) {
       return "Barsukas turetu sedeti namie";
     }
-    return "Labai daug lietaus";
+    return "Labai daug lietaus"; 
   }
-}
+
+
 
 console.log(oras(a));
 console.log(oras(b));
